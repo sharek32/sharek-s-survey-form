@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<style> 
+  .container { 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0,1);
+    width: 100%;
+    max-width: 600px; 
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  p{
+    color: #666;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"], select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+    
+    input[type="radio"]
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor:pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+<html>
+  <body>
+    <div class="container">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">We would love to hear your thoughts and concerns!</p>
+    </div>
+    <form id="survey-form" action="https://formspree.io/f/xblrdvab" method="POST"> 
+<div class=""form-group> 
+<label id="name-label" for="name">Name:</label>
+<input type="text" placeholder="Enter Your Name" required>
+ </div>
+
+<div class="form-group">
+    <label id="number-label" for="number">Age:</label>
+    <input type="number" id="number" name="number" min="10" max="99" placeholder="Enter your age" required> 
+</div>
+
+<div class="form-group">
+<label id="email-label" for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="Enter your email" required> 
+</div>
+
+<div class="form-group">
+    <label for="dropdown">Which option best describes your current role?</label>
+    <select id="dropdown" name="role" required> 
+        <option value=""disabled selected>Select an option</option>
+        <option value="student">Student</option>
+        <option value="employed">Employed</option>
+        <option value="unemployed">Unemployed</option>
+        </select>
+</div>
+
+<div class="form-group">
+    <p>Would you recommend this form to your friend?</p>
+    <label><input type="radio" name="recommend" value="definitely" required>Definitely
+    </label>
+    <label><input type="radio" name="recommend" value="maybe" required>Maybe
+    </label>
+    <label><input type="radio" name="recommend" value="not sure" required>Not sure
+    </label>
+    <label><input type="radio" name="recommend" value="not now" required>Not now
+    </label>
+</div>
+
+ <div class="form-group"> 
+    <button id="submit" type="submit">Submit</button>
+ </div>
+ </form>
+ </body>
+</html>
+
