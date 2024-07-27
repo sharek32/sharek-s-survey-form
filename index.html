@@ -44,18 +44,27 @@ input[type="number"], select, textarea {
         margin-right: 10px;
     }
 
-    button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor:pointer;
-    }
+  .btn::before {
+            background: #dcd159;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            transition: all 0.6s ease;
+        }
+        
+        .btn1::before{
+            width: 0;
+            height: 100%;
+        }
 
-    button:hover {
-        background-color: #45a049;
-    }
+        .btn1:hover::before {
+        width:100%;
+        }
 </style>
 <html>
   <body>
@@ -104,9 +113,7 @@ input[type="number"], select, textarea {
         <label for="comments">Drop us a line</label>
         <textarea id="comments" name="comments" rows="10" placeholder="Enter Your Comments Here"> </textarea> 
       </div>
- <div class="form-group"> 
-    <button id="submit" type="submit">Submit</button>
- </div>
+    <a href="" class="btn btn1">Submit</a>
  </form>
     <h3>Also, do not forget to checkout <a href="https://mdsharek32com.godaddysites.com">MdSharek 32.com</a> for sports news and blogs.</h3>
  </body>
